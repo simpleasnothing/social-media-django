@@ -1,7 +1,6 @@
-# Django Boilerplate
+# Social Media Django
 
-An enterprise Django boilerplate
-
+This is a social media platform developed with love by Django
 
 ### Run Project 
 
