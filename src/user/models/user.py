@@ -6,7 +6,7 @@ from django.db import models
 from django.utils.translation import gettext as _
 
 from utils.base_errors import BaseErrors
-from utils.general_model import GeneralModel
+from utils import GeneralModel
 
 
 def get_file_path(instance, filename):
