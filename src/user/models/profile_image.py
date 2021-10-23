@@ -5,6 +5,8 @@ from django.contrib.auth import get_user_model
 from django.db import models
 from django.utils.translation import gettext as _
 
+from utils.general_model import GeneralModel
+
 
 User = get_user_model()
 
@@ -15,7 +17,7 @@ def get_file_path(instance, filename):
     return os.path.join(f'user/{instance.user.id}/profile_image/', filename)
 
 
-class ProfileImage(models.Model):
+class ProfileImage(GeneralModel):
     user = models.ForeignKey(
         User,
         verbose_name=_("Avatar"),

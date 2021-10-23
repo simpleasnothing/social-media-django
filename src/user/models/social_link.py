@@ -3,11 +3,13 @@ from django.contrib.auth import get_user_model
 from django.db import models
 from django.utils.translation import gettext as _
 
+from utils.general_model import GeneralModel
+
 
 User = get_user_model()
 
 
-class SocialLink(models.Model):
+class SocialLink(GeneralModel):
     user = models.ForeignKey(
         User,
         verbose_name=_('User social media'),
