@@ -22,7 +22,7 @@ class ActivationCode(GeneralModel):
         verbose_name=_("ActivationCode"),
     )
     type = models.CharField(
-        max_length=1,
+        max_length=128,
         choices=TYPE_CHOICES,
         verbose_name=_("Type"),
     )
