@@ -11,9 +11,9 @@ User = get_user_model()
 
 class ActivationCode(GeneralModel):
 
-    CHOICES_TYPE = (
-        ("R", "Register"),
-        ("F", "Forgot"),
+    TYPE_CHOICES = (
+        ("REGISTER", "REGISTER"),
+        ("FORGET", "FORGET"),
     )
 
     user = models.ForeignKey(
@@ -23,7 +23,7 @@ class ActivationCode(GeneralModel):
     )
     type = models.CharField(
         max_length=1,
-        choices=CHOICES_TYPE,
+        choices=TYPE_CHOICES,
         verbose_name=_("Type"),
     )
     code = models.CharField(
