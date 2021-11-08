@@ -19,7 +19,7 @@ class ActivationCode(GeneralModel):
     user = models.ForeignKey(
         User,
         on_delete=models.CASCADE,
-        verbose_name=_("ActivationCode"),
+        verbose_name=_("Activation Code"),
     )
     type = models.CharField(
         max_length=128,
