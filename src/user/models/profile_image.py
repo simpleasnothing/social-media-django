@@ -28,7 +28,6 @@ class ProfileImage(GeneralModel):
     image = models.ImageField(
         verbose_name=_("Image"),
         upload_to=get_file_path,
-        max_length=128,
         null=True,
         blank=True
     )
