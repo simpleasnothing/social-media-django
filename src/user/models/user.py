@@ -116,3 +116,12 @@ class User(AbstractBaseUser, GeneralModel):
 
     def __str__(self):
         return self.username
+
+    def is_staff(self):
+        return self.staff
+
+    def has_perm(self, obj=None):
+        return self.is_superuser
+
+    def has_module_perms(self, app_label):
+        return self.is_superuser
