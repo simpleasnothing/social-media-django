@@ -20,21 +20,21 @@ def get_file_path(instance, filename):
 class ProfileImage(GeneralModel):
     user = models.ForeignKey(
         User,
-        verbose_name=_("Avatar"),
+        verbose_name=_('User'),
         on_delete=models.CASCADE,
-        related_name="profile_image"
+        related_name='profile_images'
     )
 
     image = models.ImageField(
-        verbose_name=_("Image"),
+        verbose_name=_('Image'),
         upload_to=get_file_path,
         null=True,
         blank=True
     )
 
     class Meta:
-        verbose_name = _("ProfileImage")
-        verbose_name_plural = _("ProfileImages")
+        verbose_name = _('ProfileImage')
+        verbose_name_plural = _('ProfileImages')
 
     def __str__(self):
-        return f"{self.user}"
+        return f'{self.user}'

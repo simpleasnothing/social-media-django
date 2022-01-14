@@ -40,7 +40,7 @@ class Post(GeneralModel):
     like = models.ManyToManyField(
         User,
         verbose_name=_('Like'),
-        related_name="likers"
+        related_name='likers'
     )
     feed = models.ManyToManyField(
         User,

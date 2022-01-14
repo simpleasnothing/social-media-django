@@ -25,8 +25,8 @@ class SocialLink(GeneralModel):
     )
 
     class Meta:
-        verbose_name = _("SocialLink")
-        verbose_name_plural = _("SocialLinks")
+        verbose_name = _('SocialLink')
+        verbose_name_plural = _('SocialLinks')
 
     def __str__(self):
         return self.name
