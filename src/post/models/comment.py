@@ -1,6 +1,3 @@
-import os
-import uuid
-
 from django.contrib.auth import get_user_model
 from django.db import models
 from django.utils.translation import gettext as _
@@ -29,7 +26,9 @@ class Comment(GeneralModel):
         'post.Post',
         verbose_name=_('Parent'),
         related_name='replies',
-        on_delete=models.CASCADE
+        on_delete=models.CASCADE,
+        blank=True,
+        null=True
     )
 
     def __str__(self):

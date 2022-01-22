@@ -5,8 +5,8 @@ from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
 from django.db import models
 from django.utils.translation import gettext as _
 
-from utils.base_errors import BaseErrors
 from utils import GeneralModel
+from utils.base_errors import BaseErrors
 
 
 def get_file_path(instance, filename):
@@ -115,7 +115,7 @@ class User(AbstractBaseUser, GeneralModel):
     objects = UserManager()
 
     def __str__(self):
-        return self.username
+        return self.email
 
     def is_staff(self):
         return self.staff

@@ -35,16 +35,19 @@ class Post(GeneralModel):
     )
     tag = models.ManyToManyField(
         'tag.Tag',
-        verbose_name=_('Tag')
+        verbose_name=_('Tag'),
+        blank=True,
     )
     like = models.ManyToManyField(
         User,
         verbose_name=_('Like'),
-        related_name='likers'
+        related_name='likers',
+        blank=True,
     )
     feed = models.ManyToManyField(
         User,
-        verbose_name=_('Feed')
+        verbose_name=_('Feed'),
+        blank=True,
     )
     reshare = models.ForeignKey(
         'post.Post',
