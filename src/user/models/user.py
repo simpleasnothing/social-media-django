@@ -12,7 +12,7 @@ from utils.base_errors import BaseErrors
 def get_file_path(instance, filename):
     ext = filename.split('.')[-1]
     filename = '%s.%s' % (uuid.uuid4(), ext)
-    return os.path.join(f'user/{instance.user.id}', filename)
+    return os.path.join(f'user/images/{instance.id}', filename)
 
 
 class UserManager(BaseUserManager):
