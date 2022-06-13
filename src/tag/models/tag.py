@@ -12,7 +12,8 @@ class Tag(GeneralModel):
         User,
         verbose_name=_('Creator'),
         on_delete=models.SET_NULL,
-        related_name='tags'
+        related_name='tags',
+        null=True
     )
     name = models.CharField(
         verbose_name=_('Name'),
