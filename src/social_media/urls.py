@@ -18,6 +18,7 @@ from django.urls import path, include
 
 v1_urlpatterns = [
     path('post/', include('post.api.urls', namespace='post')),
+    path('user/', include('user.api.urls', namespace='user')),
 
 ]
 
