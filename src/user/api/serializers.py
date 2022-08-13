@@ -3,6 +3,7 @@ from django.contrib.auth import get_user_model,authenticate
 
 User=get_user_model()
 
+# serializer for register and get user details 
 class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
@@ -12,7 +13,10 @@ class UserSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         return User.objects.create_user(**validated_data)
+    
+ 
 
+# serializer for user login
 class UserLoginSerializer(serializers.Serializer):
     email=serializers.EmailField()
     password=serializers.CharField()
