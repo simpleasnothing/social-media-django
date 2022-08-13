@@ -1,9 +1,4 @@
 from django.urls import path
-from rest_framework_simplejwt.views import (
-    TokenObtainPairView,
-    TokenRefreshView,
-)
-
 from user.api.views import UserLoginView, UserRegisterView
 
 app_name='user'
