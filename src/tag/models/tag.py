@@ -11,8 +11,9 @@ class Tag(GeneralModel):
     creator = models.ForeignKey(
         User,
         verbose_name=_('Creator'),
-        on_delete=models.CASCADE,
-        related_name='tags'
+        on_delete=models.SET_NULL,
+        related_name='tags',
+        null=True
     )
     name = models.CharField(
         verbose_name=_('Name'),
