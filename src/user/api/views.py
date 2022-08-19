@@ -2,12 +2,10 @@ from rest_framework import generics
 from rest_framework.response import Response
 
 from user.api.serializers import LoginSerializer
-from user.models import User as UserModel
 from utils import BaseVersioning
 
 
 class UserLoginView(generics.CreateAPIView):
-    queryset = UserModel.objects
     serializer_class = LoginSerializer
     versioning_class = BaseVersioning
 
